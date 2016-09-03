@@ -7,5 +7,5 @@ It is not meant for production use.
 ## Installation
 * Clone the project into a PHP-enabled public folder on a web server.
 * Set up DB access in dbcreds.php.
-* Import the database: 
+* Import the sample database: mysql -uroot -p < dbinit.sql
 * Navigate to the project folder with a web browser.
