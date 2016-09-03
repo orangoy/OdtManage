@@ -1,0 +1,7 @@
+<?php
+// Replace with valid mysql credentials
+
+define("DBUSER", "xxxx");
+define("DBPW", "xxxx");
+
+define("DBNAME, "odf");

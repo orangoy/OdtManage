@@ -1,0 +1,27 @@
+label {
+ font-weight: bold;
+ margin-right: 2px;
+ margin-left: 2px;
+}
+
+input {
+ padding-left: 2px;
+}
+
+.icon {
+  padding-right: 5px;  
+}
+
+.unchanged {
+ border: none;
+  
+}
+.changed {
+  color: blue;
+  background-color: lightyellow;
+  border-color: red;
+  border-style: solid;
+}
+  
+  
+
