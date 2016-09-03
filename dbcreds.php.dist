@@ -4,4 +4,4 @@
 define("DBUSER", "xxxx");
 define("DBPW", "xxxx");
 
-define("DBNAME, "odf");
+define("DBNAME", "odf");
