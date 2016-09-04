@@ -1,12 +1,9 @@
 <html>
 <head>
-<link rel="stylesheet" href="css/jquery.dataTables.css">
-<link rel="stylesheet" href="css/style.css">
-<script src="js/jquery.js"></script>
-<script src="js/jquery.dataTables.min.js"></script>
-<script>
-    
-  // Setup - add a text input to each footer cell
+<!-- common scripts and stylesheets -->
+<?php require(dirname(__FILE__).'/head-common.html.php'); ?>
+<script>    
+  // Setup datatables - add a text input to each footer cell
 
     $(document).ready(function() { 
     $('#index tfoot th').each( function () {
@@ -34,23 +31,23 @@
 </head>
 
 <body>
-<h1 style="display: inline-block">Dokumenter</h1>
+<h1 style="display: inline-block">Documents</h1>
 <a style="vertical-align: top; float: right;" href="edit.php"><img src="images/new.png"></a>
 
 <table id="index" class="stripe" cellspacing="0">
 <thead>
     <th>Id</th>
-    <th>Tittel</th>
-    <th>Av</th>
-    <th>Tid</th>
-    <th>Størrelse</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Time</th>
+    <th>Size</th>
 </thead>
 <tfoot>
     <th>Id</th>
-    <th>Tittel</th>
-    <th>Av</th>
-    <th>Tid</th>
-    <th>Størrelse</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Time</th>
+    <th>Size</th>
 </tfoot>
 
 <tbody>
@@ -64,7 +61,7 @@
                         "<a href=\"ViewerJS/#../openbyid.php?id=".intval($value)."\"><img class=\"icon\" src=\"images/view.png\" /></a>
                         <a href=\"edit.php?id=".intval($value)."\"><img class=\"icon\" src=\"images/edit.png\" /></a>
                         <a href=\"openbyid.php?id=".intval($value)."\"><img class=\"icon\" src=\"images/dl.png\" /></a>                         
-                        <a onclick=\"return confirm('Sletting kan ikke gjenopprettes. Er du sikker?')\"  href=\"deletebyid.php?id=".intval($value)."\"><img class=\"icon\" src=\"images/delete.png\" /></a>";                         
+                        <a onclick=\"return confirm('Deleted files can not be restored. Are you sure?')\"  href=\"deletebyid.php?id=".intval($value)."\"><img class=\"icon\" src=\"images/delete.png\" /></a>";                         
                     else                    
                         echo $value;                    
                     ?>
