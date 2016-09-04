@@ -6,6 +6,11 @@ It is not meant for production use. For use on a public web server the
 illustrated techniques should be
 applied within a framework with proper authentication and validation.
 
+## Prerequisites
+
+The server side requires a webserver with PHP and the PDO driver for Mysql/MariaDB enabled.
+The client side should run on reasonably modern browsers.
+
 ## Installation
 * Clone the project into a PHP-enabled public folder on a web server.
 * Set up DB access and choose database name in dbcreds.php by copying from dbcreds.php.dist and editing.
