@@ -6,6 +6,9 @@ It is not meant for production use.
 
 ## Installation
 * Clone the project into a PHP-enabled public folder on a web server.
-* Set up DB access in dbcreds.php.
-* Import the sample database: mysql -uroot -p < dbinit.sql
+* Set up DB access and choose database name in dbcreds.php.
+* Create and import the sample database (containing sample template for empty document): 	
+	mysql -uroot -p -e "create database '<dbname>'"
+	mysql -uroot -p <dbnam> < dbinit.sql
+
 * Navigate to the project folder with a web browser.

@@ -31,7 +31,7 @@ try {
     $stmt = $db->prepare("select id,title,creatorname,updated,length(odfcontent) size from odfiles where id=:id");
     $stmt->bindParam(':id', $id, PDO::PARAM_INT);
     $stmt->execute();
-    $meta = $stmt->fetch(PDO::FETCH_ASSOC);
+    $meta = $stmt->fetch(PDO::FETCH_ASSOC);        
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
@@ -41,13 +41,13 @@ try {
 <html>
 <head>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- editor: start -->
     <script src="wodotexteditor/wodotexteditor.js" type="text/javascript" charset="utf-8"></script>
-    <script src="FileSaver.js" type="text/javascript" charset="utf-8"></script>
-    <script src="localfileeditor.js" type="text/javascript" charset="utf-8"></script>
+    <script src="editor.js" type="text/javascript" charset="utf-8"></script>
     <script>
-        // Set variables
-       var odfLoadUrl="openbyid.php?id=<?php echo $id?>";        
+        // Set variables used by the editor in editor.js
+       var odfLoadUrl="openbyid.php?id=<?php echo $id?>";               
+       var odfEditorFullname = "Øyvind Rangøy";
+       var odfEditorColor = "green";       
        var odfMeta = [];<?php              
                echo "\n"; 
                foreach ($meta as $key => $value) {               
