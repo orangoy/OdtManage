@@ -165,9 +165,10 @@ function createEditor() {
                     contentType: false,
                     success: function (data) {
                         // Success!
-                        alert('Saved! ' + data);
-                        $('form input').removeClass('changed').addClass('unchanged');
-                        
+                        // This annoying message can be activated for debugging:
+                        // alert('Saved! ' + data);                                                
+                        // And now, on success, we can set the classes for the newly saved form fields to unchanged
+                        $('form input').removeClass('changed').addClass('unchanged');                        
                     },
                     error: function (data) {
                         // Failure.
