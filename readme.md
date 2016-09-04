@@ -6,7 +6,7 @@ It is not meant for production use.
 
 ## Installation
 * Clone the project into a PHP-enabled public folder on a web server.
-* Set up DB access and choose database name in dbcreds.php.
+* Set up DB access and choose database name in dbcreds.php by copying from dbcreds.php.dist and editing.
 * Create and import the sample database (containing sample template for empty document): 	
 ```
 	mysql -uroot -p -e "create database <dbname>"
