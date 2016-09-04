@@ -1,5 +1,5 @@
-<?php
-include "db.php";
+<?php include "bootstrap.php";
+
 // Get ID, default to 1
 if(!isset($_GET['id']) || intval($_GET['id']) <= 0) $id=1; else $id = intval($_GET['id']);
 

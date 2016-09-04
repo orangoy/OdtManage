@@ -1,5 +1,5 @@
-<?php
-include "db.php";
+<?php include "bootstrap.php";
+
 // File data from the editor is automatically submitted
 $fileName = $_POST['odfFileName'];
 $fileBlob = $_FILES['odfData'];

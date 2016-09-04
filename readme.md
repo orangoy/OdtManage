@@ -14,10 +14,10 @@ The client side should run on reasonably modern browsers.
 ## Installation
 * Clone the project into a PHP-enabled public folder on a web server.
 * Set up DB access and choose database name in dbcreds.php by copying from dbcreds.php.dist and editing.
-* Create and import the sample database (containing sample template for empty document): 	
+* Create and import the sample database in the setup dir (containing sample template for empty document): 	
 ```
 	mysql -uroot -p -e "create database <dbname>"
-	mysql -uroot -p <dbname> < dbinit.sql
+	mysql -uroot -p <dbname> < setup/dbinit.sql
 ```
 * Navigate to the project folder with a web browser.
 

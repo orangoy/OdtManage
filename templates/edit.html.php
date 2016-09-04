@@ -1,8 +1,8 @@
 <html>
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="wodotexteditor/wodotexteditor.js" type="text/javascript" charset="utf-8"></script>
-    <script src="editor.js" type="text/javascript" charset="utf-8"></script>
+    <script src="js/jquery.js"></script>
+    <script src="wodotexteditor/wodotexteditor.js" charset="utf-8"></script>
+    <script src="js/editor.js" charset="utf-8"></script>
     <script>
         // Set variables used by the editor in editor.js
        var odfLoadUrl="openbyid.php?id=<?php echo $id?>";               

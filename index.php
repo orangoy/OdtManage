@@ -1,4 +1,4 @@
-<?php include "db.php"; 
+<?php include "bootstrap.php"; 
 
 // Get index from database
 try {

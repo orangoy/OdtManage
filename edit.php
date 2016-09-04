@@ -1,4 +1,4 @@
-<?php include "db.php"; 
+<?php include "bootstrap.php"; 
 
 // Get ID, default to 0
 if(!isset($_REQUEST['id']) || intval($_REQUEST['id']) <= 0) $id=0; else $id = intval($_REQUEST['id']); 
