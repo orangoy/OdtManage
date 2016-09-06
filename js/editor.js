@@ -234,7 +234,6 @@ function createEditor() {
         }
         });
 
-
         if (docUrl) {
             loadedFilename = docUrl;
             // Clear the cache so we don't load old docs.

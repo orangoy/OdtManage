@@ -1,0 +1,14 @@
+{
+"repositories":
+[
+    {
+        "type": "vcs",
+        "url": "http://github.com/orangoy/pandoc-php"
+    }
+],
+
+
+"require": {
+    "ryakad/pandoc-php": "dev-master"
+}
+} 

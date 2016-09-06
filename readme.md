@@ -10,9 +10,16 @@ applied within a framework with proper authentication and validation.
 
 The server side requires a webserver with PHP and the PDO driver for Mysql/MariaDB enabled.
 The client side should run on reasonably modern browsers.
+Composer is required for installing PHP dependencies and Bower for js
+dependencies.
 
 ## Installation
 * Clone the project into a PHP-enabled public folder on a web server.
+* Install composer and bower packages:
+```
+	composer install
+	bower install
+```
 * Set up DB access and choose database name in dbcreds.php by copying from dbcreds.php.dist and editing.
 * Create and import the sample database in the setup dir (containing sample template for empty document): 	
 ```

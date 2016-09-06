@@ -58,7 +58,7 @@
                     <?php 
                     if($name=="id")
                         echo 
-                        "<a href=\"ViewerJS/#../openbyid.php?id=".intval($value)."\"><img class=\"icon\" src=\"images/view.png\" /></a>
+                        "<a href=\"vendor/viewerjs/ViewerJS/#../../../openbyid.php?id=".intval($value)."\"><img class=\"icon\" src=\"images/view.png\" /></a>
                         <a href=\"edit.php?id=".intval($value)."\"><img class=\"icon\" src=\"images/edit.png\" /></a>
                         <a href=\"openbyid.php?id=".intval($value)."\"><img class=\"icon\" src=\"images/dl.png\" /></a>                         
                         <a onclick=\"return confirm('Deleted files can not be restored. Are you sure?')\"  href=\"deletebyid.php?id=".intval($value)."\"><img class=\"icon\" src=\"images/delete.png\" /></a>";                         

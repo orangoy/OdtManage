@@ -4,7 +4,7 @@
     <?php require(dirname(__FILE__).'/head-common.html.php'); ?>
     
     <!-- WebOdf wodotexteditor core components -->
-    <script src="wodotexteditor/wodotexteditor.js" charset="utf-8"></script>
+    <script src="vendor/Wodo.TextEditor/wodotexteditor/wodotexteditor.js" charset="utf-8"></script>
     <!-- our webodf callbacks -->
     <script src="js/editor.js" charset="utf-8"></script>
     <!-- specific editor setup: -->

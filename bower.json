@@ -1,0 +1,7 @@
+{
+  "name": "odtmanage",
+  "dependencies": {
+    "viewerjs": "^0.5.9",
+    "Wodo.TextEditor": "wodo.texteditor#^0.5.9"
+  }
+}

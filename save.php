@@ -18,18 +18,19 @@ if(isset($id) && isset($idfield) && intval($id)>0){ $idbind=":".$idfield; $idbin
 $title = $_POST['title'];
 $creator = $_POST['creatorname'];
 
-// Melding tilbake:
-//echo "\n$title\n$creator\n";
-//echo "Storleik: ".strlen($odfContent)."\n";
+// Convert to plain text for indexing
+$p = new Pandoc\Pandoc();
+$txtContent = $p->convert($odfContent,'odt','plain');
 
 // Save to database
 try {
-    $sql = "REPLACE INTO odfiles(".$idfielder."title,creatorname,odfcontent) VALUES (".$idbinder.":title, :creator, :filecontent)";
+    $sql = "REPLACE INTO odfiles(".$idfielder."title,creatorname,odfcontent,txtcontent) VALUES (".$idbinder.":title, :creator, :filecontent, :txtcontent)";
     // echo $sql."\n";
     $stmt = $db->prepare($sql);
     $stmt->bindParam(':title', $title, PDO::PARAM_STR);
     $stmt->bindParam(':creator', $creator, PDO::PARAM_STR);
     $stmt->bindParam(':filecontent', $odfContent, PDO::PARAM_LOB);
+    $stmt->bindParam(':txtcontent', $txtContent, PDO::PARAM_STR);
     // ID only if already set
     if(isset($id) && $id>0) $stmt->bindParam($idbind, $id, PDO::PARAM_INT);
 
@@ -37,5 +38,9 @@ try {
 } catch(PDOException $e) {
     echo $e->getMessage();
 }
+
+
+
+
 
 // print_r($_POST);
